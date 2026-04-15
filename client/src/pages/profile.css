@@ -1,0 +1,42 @@
+/* PROFILE */
+
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.profile-button {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background: #0056b3;
+}
+
+.profile-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.profile-success {
+  color: green;
+  margin-top: 10px;
+}

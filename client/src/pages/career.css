@@ -1,0 +1,52 @@
+/* CAREER */
+
+.career-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.career-select {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.career-button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.career-dashboard-button {
+  padding: 10px;
+  background: #2e064b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.career-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.career-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.career-success {
+  color: green;
+  margin-top: 10px;
+}
+
+.career-preview {
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}

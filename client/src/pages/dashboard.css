@@ -1,0 +1,245 @@
+.dashboard-container {
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  background: #2e064b;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(27, 4, 44, 0.22);
+}
+
+.dashboard-navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin: 28px 0 16px;
+  color: #ffffff;
+}
+
+.dashboard-error {
+  margin: 0 auto 20px;
+  max-width: 700px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 91, 91, 0.18);
+  color: #fff3f3;
+  text-align: center;
+}
+
+.dashboard-section {
+  margin-top: 28px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.section-heading h2 {
+  margin: 0 0 6px;
+}
+
+.section-heading p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-setup-grid {
+  grid-template-columns: minmax(320px, 520px);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  min-height: calc(100vh - 280px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #333;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.24);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  color: #1f2937;
+}
+
+.dashboard-card p,
+.dashboard-card li {
+  line-height: 1.55;
+  font-size: 1.04rem;
+}
+
+.dashboard-action-card {
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  padding: 32px;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.dashboard-action-card h3 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.dashboard-action-card p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 24px;
+}
+
+.dashboard-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2e064b, #5b21b6);
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.dashboard-highlight {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e064b;
+}
+
+.dashboard-card-wide {
+  grid-column: 1 / -1;
+}
+
+.dashboard-recommendation-intro {
+  margin-bottom: 18px;
+  color: #4b5563;
+}
+
+.dashboard-chart-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(320px, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.chart-panel {
+  position: relative;
+  min-height: 300px;
+  padding: 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(238, 242, 255, 0.92));
+}
+
+.chart-panel-donut {
+  max-width: 360px;
+}
+
+.chart-empty {
+  margin: 0;
+  color: #475569;
+  font-size: 1rem;
+}
+
+.progress-item {
+  margin-bottom: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links button {
+    margin: 0;
+  }
+
+  .dashboard-setup-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .dashboard-action-card {
+    min-height: 220px;
+    padding: 24px;
+  }
+
+  .dashboard-action-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-chart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-panel {
+    min-height: 260px;
+  }
+}

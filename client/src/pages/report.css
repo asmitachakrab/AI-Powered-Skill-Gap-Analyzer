@@ -1,0 +1,28 @@
+/* REPORT */
+
+.report-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.report-section {
+  background: #ffffff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.report-button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .report-button:hover {
+    background: #0056b3;
+  }

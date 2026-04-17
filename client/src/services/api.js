@@ -1,8 +1,12 @@
 import axios from "axios";
 
-// 🌐 Base URL (auto-switch for production later)
+// 🌐 Use ENV in production, fallback to deployed backend
+const BASE_URL =
+  process.env.REACT_APP_API_URL ||
+  "https://ai-powered-skill-gap-analyzer-backend.onrender.com/api";
+
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api"
+  baseURL: BASE_URL
 });
 
 // 🔐 Attach token automatically
@@ -24,14 +28,12 @@ API.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response) {
-      // 🔴 Token expired / invalid
       if (error.response.status === 401) {
         console.warn("Unauthorized! Logging out...");
 
         localStorage.removeItem("token");
         localStorage.removeItem("user");
 
-        // Redirect to login
         window.location.href = "/";
       }
     }
